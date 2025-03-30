@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>min_snap_trajectory</name>
+  <version>0.0.1</version>
+  <description>
+    Minimum snap trajectory generation and execution for MAVROS-controlled drones.
+  </description>
+
+  <maintainer email="3462846577@qq.com">LYU DINGYI</maintainer>
+  <license>Apache 2.0</license>
+
+  <!-- 构建工具依赖 -->
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- 构建和运行依赖 -->
+  <depend>roscpp</depend>
+  <depend>geometry_msgs</depend>
+  <depend>mavros_msgs</depend>
+  <depend>eigen</depend>  <!-- ROS中Eigen3的依赖名称 -->
+
+  <!-- 如果polynomial_trajectories和quadrotor_common是私有包 -->
+  <!-- 需要添加build和exec依赖 -->
+  <build_depend>polynomial_trajectories</build_depend>
+  <exec_depend>polynomial_trajectories</exec_depend>
+  <build_depend>quadrotor_common</build_depend>
+  <exec_depend>quadrotor_common</exec_depend>
+
+</package>

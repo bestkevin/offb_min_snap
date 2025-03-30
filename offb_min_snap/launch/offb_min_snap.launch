@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- 启动MAVROS节点，连接飞控 -->
+    <include file="$(find mavros)/launch/px4.launch">
+        <arg name="fcu_url" value="udp://:14540@127.0.0.1:14557" /> <!-- SITL默认端口 -->
+        <arg name="gcs_url" value="" />
+        <arg name="tgt_system" value="1" />
+        <arg name="tgt_component" value="1" />
+    </include>
+
+    <!-- 启动最小加加速度轨迹控制节点 -->
+    <node pkg="min_snap_trajectory" 
+          type="offb_min_snap" 
+          name="offb_min_snap" 
+          output="screen">
+    </node>
+</launch>
