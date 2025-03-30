@@ -1,4 +1,4 @@
-The node generates min_snap trajectory through the set waypoint.
+The node generates min_snap trajectory through the set waypoint, and control quadrotor to fly through the trajectory in offboard mode.
 
 The following parameters can be changed: segment time, waypoints coodinates, minimization_weights, max_velocity, max_normalized_thrust, max_roll_pitch_rate
 
